@@ -1,5 +1,4 @@
-# ArtCircleProgress
-
+ArtCircleProgress
 ===============
 Android Circle Progress 
 
