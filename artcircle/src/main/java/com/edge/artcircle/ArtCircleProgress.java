@@ -14,7 +14,6 @@ import android.graphics.SweepGradient;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 
@@ -59,6 +58,10 @@ public class ArtCircleProgress extends View {
         init(context, attrs);
     }
 
+    public ArtCircleProgress(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        init(context,attrs);
+    }
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
@@ -75,6 +78,11 @@ public class ArtCircleProgress extends View {
         }
 
         setMeasuredDimension(widthMeasureSpec, widthMeasureSpec);
+    }
+
+    @Override
+    protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
+        super.onLayout(changed, left, top, right, bottom);
     }
 
     @Override
@@ -151,7 +159,6 @@ public class ArtCircleProgress extends View {
         if (!isOutMode) {
             float yStartPoint = shadowRadius + midPointY* 0.2f;
             float xStartPoint = shadowRadius + midPointX * 0.2f;
-            Log.d("aaaa",(width-xStartPoint)+","+(height-yStartPoint)+",");
             artRect = new RectF(xStartPoint, yStartPoint, width - xStartPoint, height - yStartPoint);
         } else {
             artRect = new RectF(shadowRadius*1.5f, shadowRadius*1.5f, width-shadowRadius*1.5f , height - shadowRadius*1.5f);
