@@ -37,7 +37,11 @@ Usage
             app:textSize="17dp"
             app:textShow="true" />
 ```
-
+```java
+        ArtCircleProgress artCircleProgress = new ArtCircleProgress(this);
+        artCircleProgress.setProgress(30);
+        artCircleProgress.setMaxProgress(50);
+```
 
 
 ##### Properties:
