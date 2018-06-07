@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.edge.artcircleprogress.MainActivity">
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+        <com.edge.artcircle.ArtCircleProgress
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shadowRadius="10dp"
+            app:progressStartColor="#30aaee"
+            app:progressEndColor="#ee6666"
+            app:progress="70"
+            app:maxProgress="100"
+            app:animateLoading="true"
+            app:animateDuration="2000"
+            app:outMode="false"
+            app:progressWidth="5dp"
+            app:textSize="17dp"
+            app:textShow="true"
+            />
+        <com.edge.artcircle.ArtCircleProgress
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:shadowRadius="10dp"
+            app:progressStartColor="#30aaee"
+            app:progressEndColor="#ee6666"
+            app:progress="70"
+            app:maxProgress="100"
+            app:animateLoading="true"
+            app:animateDuration="2000"
+            app:outMode="true"
+            app:progressWidth="10dp"
+            app:textSize="17dp"
+            app:textShow="true"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
