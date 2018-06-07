@@ -39,9 +39,7 @@
             app:outMode="true"
             app:progressWidth="10dp"
             app:textSize="17dp"
-            app:textShow="true"
-
-            />
+            app:textShow="true" />
     </LinearLayout>
 
 </RelativeLayout>

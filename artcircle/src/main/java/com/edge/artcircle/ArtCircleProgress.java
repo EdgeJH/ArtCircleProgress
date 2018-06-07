@@ -197,4 +197,13 @@ public class ArtCircleProgress extends View {
 
         invalidate();
     }
+
+    public void setProgress(int progress){
+        this.progress =progress;
+        invalidate();
+    }
+    public void setMaxProgress(int maxProgress){
+        this.maxProgress = maxProgress;
+        invalidate();
+    }
 }
