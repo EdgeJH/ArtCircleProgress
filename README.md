@@ -15,7 +15,7 @@ allprojects {
 ```
 ```groovy
 dependencies {
-     implementation 'com.github.EdgeJH:ArtCircleProgress:1.0.2'
+     implementation 'com.github.EdgeJH:ArtCircleProgress:1.0.3'
 }
 ```
 
