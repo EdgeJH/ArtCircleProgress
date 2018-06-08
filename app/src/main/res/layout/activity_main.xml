@@ -6,39 +6,49 @@
     android:layout_height="match_parent"
     tools:context="com.edge.artcircleprogress.MainActivity">
     <LinearLayout
-        android:layout_width="200dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_gravity="center_horizontal"
-        android:orientation="vertical">
+        android:orientation="horizontal">
         <com.edge.artcircle.ArtCircleProgress
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             app:shadowRadius="10dp"
             app:progressStartColor="#30aaee"
             app:progressEndColor="#ee6666"
             app:progress="70"
+            android:id="@+id/circle2"
+            app:textColor="#ee6666"
             app:maxProgress="100"
             app:animateLoading="true"
             app:animateDuration="2000"
             app:outMode="false"
             app:progressWidth="5dp"
-            app:textSize="17dp"
+            app:textSize="25dp"
             app:textShow="true"
+            app:progressBackColor="#eee"
+            app:circleBackgroundColor="@android:color/white"
             />
         <com.edge.artcircle.ArtCircleProgress
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             app:shadowRadius="10dp"
-            app:progressStartColor="#30aaee"
-            app:progressEndColor="#ee6666"
+            app:progressStartColor="#e9c914"
+            app:progressEndColor="#337b1b"
+            android:id="@+id/circle1"
             app:progress="70"
             app:maxProgress="100"
             app:animateLoading="true"
+            app:textColor="#337b1b"
             app:animateDuration="2000"
+            app:progressBackColor="#eee"
+            app:circleBackgroundColor="@android:color/white"
             app:outMode="true"
             app:progressWidth="10dp"
-            app:textSize="17dp"
+            app:textSize="25dp"
             app:textShow="true" />
     </LinearLayout>
 

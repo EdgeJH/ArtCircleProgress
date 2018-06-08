@@ -44,10 +44,12 @@ public class ArtCircleProgress extends View {
     private float mCircleSweepAngle;
     private Path progressPath = new Path();
     private Path progressBackPath = new Path();
+    private int circleBackGroundColor;
     private boolean isOutMode = false;
     private float ratio = 0;
     private int xPos, yPos;
     private boolean textShow;
+    private int progressBackColor;
 
     public ArtCircleProgress(Context context) {
         super(context);
@@ -127,16 +129,18 @@ public class ArtCircleProgress extends View {
         animateDuration = typedArray.getInteger(R.styleable.ArtCircleProgress_animateDuration, 2000);
         isOutMode = typedArray.getBoolean(R.styleable.ArtCircleProgress_outMode, false);
         textColor = typedArray.getColor(R.styleable.ArtCircleProgress_textColor, ContextCompat.getColor(context, R.color.dark_gray));
+        circleBackGroundColor =typedArray.getColor(R.styleable.ArtCircleProgress_circleBackgroundColor, Color.WHITE);
+        progressBackColor = typedArray.getColor(R.styleable.ArtCircleProgress_progressBackColor,ContextCompat.getColor(context,R.color.white_gray));
         textSize = typedArray.getDimension(R.styleable.ArtCircleProgress_textSize, 50f);
         textShow = typedArray.getBoolean(R.styleable.ArtCircleProgress_textShow,true);
 
         ratio = (float) progress / (float) maxProgress;
         shadowPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        shadowPaint.setColor(Color.WHITE);
+        shadowPaint.setColor(circleBackGroundColor);
         shadowPaint.setShadowLayer(shadowRadius, 3f, 3f, shadowColor);
         setLayerType(LAYER_TYPE_SOFTWARE, shadowPaint);
         progressBackPaint = new Paint();
-        progressBackPaint.setColor(ContextCompat.getColor(context, R.color.white_gray));
+        progressBackPaint.setColor(progressBackColor);
         progressBackPaint.setStrokeCap(Paint.Cap.ROUND);
         progressBackPaint.setStyle(Paint.Style.STROKE);
         progressBackPaint.setStrokeWidth(progressWidth);
@@ -180,6 +184,9 @@ public class ArtCircleProgress extends View {
     }
 
     private void initAnimation() {
+        if (mTimerAnimator!=null&&mTimerAnimator.isRunning()){
+            mTimerAnimator.cancel();
+        }
         mTimerAnimator = ValueAnimator.ofFloat(0f, 1f);
         mTimerAnimator.setDuration(animateDuration);
         mTimerAnimator.setInterpolator(new AccelerateDecelerateInterpolator());

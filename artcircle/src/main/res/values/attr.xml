@@ -14,5 +14,7 @@
         <attr name="textColor" format="color"/>
         <attr name="textSize" format="dimension"/>
         <attr name="textShow" format="boolean"/>
+        <attr name="circleBackgroundColor" format="color"/>
+        <attr name="progressBackColor" format="color"/>
     </declare-styleable>
 </resources>
