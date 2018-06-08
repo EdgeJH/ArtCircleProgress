@@ -2,7 +2,7 @@ ArtCircleProgress
 ===============
 Android Circle Progress 
 
-![ArtCircleProgress](/ArtCircleProgress.gif)
+![ArtCircleProgress](/ArtCircleProgress_.gif)
 
 Gradle
 ------------
