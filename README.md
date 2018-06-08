@@ -22,20 +22,25 @@ dependencies {
 Usage
 --------
 ```xml
-      <com.edge.artcircle.ArtCircleProgress
-            android:layout_width="match_parent"
+   <com.edge.artcircle.ArtCircleProgress
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             app:shadowRadius="10dp"
             app:progressStartColor="#30aaee"
             app:progressEndColor="#ee6666"
             app:progress="70"
+            app:textColor="#ee6666"
             app:maxProgress="100"
             app:animateLoading="true"
             app:animateDuration="2000"
-            app:outMode="true"
-            app:progressWidth="10dp"
-            app:textSize="17dp"
-            app:textShow="true" />
+            app:outMode="false"
+            app:progressWidth="5dp"
+            app:textSize="25dp"
+            app:textShow="true"
+            app:progressBackColor="#eee"
+            app:circleBackgroundColor="@android:color/white"
+            />
 ```
 ```java
         ArtCircleProgress artCircleProgress = new ArtCircleProgress(this);
@@ -57,6 +62,9 @@ Usage
 * `app:progressWidth`
 * `app:textSize`
 * `app:textShow`
+* `app:textColor`
+* `app:progressBackColor`    
+* `app:circleBackgroundColor`         
 
 License
 --------
